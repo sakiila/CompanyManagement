@@ -26,9 +26,11 @@
 实现整个系统需要五个类文件。Employee类是所有人员的父类，Manager类、Saler类和Technician类继承于这个父类，并有自己的构造方法和其他方法，如图1所示。CompanyList类实现一个ArrayList集合，用来存放公司人员信息。其有增删改查等相关的方法，如图2所示。OperationPanel类是继承于JFrame类、实现ActionListener类的界面类，包含actionPerformed方法和main方法。
 
 Employee类及其子类：
+
 ![Employee类及其子类](https://upload-images.jianshu.io/upload_images/2348575-fc39ddc2c1608894.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 系统功能模块图：
+
 ![系统功能模块图](https://upload-images.jianshu.io/upload_images/2348575-f30fc630f9e95abb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
