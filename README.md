@@ -1,3 +1,6 @@
+
+[跳转链接](https://baobo.me/post/qi-ye-ren-yuan-xin-xi-guan-li-xi-tong-kai-fa/)
+
 # 企业人员信息管理系统设计
 
 ## 一、需求分析：
