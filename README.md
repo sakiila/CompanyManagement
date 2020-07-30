@@ -1,15 +1,3 @@
----
-title: '企业人员信息管理系统开发'
-date: 2020-07-29 16:00:03
-tags: [Java]
-published: true
-hideInList: false
-feature: https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
-isTop: false
----
-企业人员信息管理系统设计，软件设计大作业。
-<!-- more -->
-
 ## 一、需求分析：
 
 某小型公司，主要有三类人员：经理、兼职技术人员和兼职推销员。这三类人员共同拥有的相关属性：姓名、编号；相关方法：获取当月薪水的getPay()方法、显示个人信息的toString()方法。
