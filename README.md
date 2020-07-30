@@ -1,11 +1,18 @@
-
-[跳转链接](https://baobo.me/post/qi-ye-ren-yuan-xin-xi-guan-li-xi-tong-kai-fa/)
-
-# 企业人员信息管理系统设计
+---
+title: '企业人员信息管理系统开发'
+date: 2020-07-29 16:00:03
+tags: [Java]
+published: true
+hideInList: false
+feature: https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
+isTop: false
+---
+企业人员信息管理系统设计，软件设计大作业。
+<!-- more -->
 
 ## 一、需求分析：
 
-  某小型公司，主要有三类人员：经理、兼职技术人员和兼职推销员。这三类人员共同拥有的相关属性：姓名、编号；相关方法：获取当月薪水的getPay()方法、显示个人信息的toString()方法。
+某小型公司，主要有三类人员：经理、兼职技术人员和兼职推销员。这三类人员共同拥有的相关属性：姓名、编号；相关方法：获取当月薪水的getPay()方法、显示个人信息的toString()方法。
 
 人员编号基数为1000，每创建一个人员实例对象，其编号属性的值顺序加1。月薪计算方法：经理拿固定月薪8000元；兼职技术人员按每小时100元领取月薪；兼职推销人员的月薪按当月的销售额的4%提成。
 
@@ -27,9 +34,10 @@
 
 实现整个系统需要五个类文件。Employee类是所有人员的父类，Manager类、Saler类和Technician类继承于这个父类，并有自己的构造方法和其他方法，如图1所示。CompanyList类实现一个ArrayList集合，用来存放公司人员信息。其有增删改查等相关的方法，如图2所示。OperationPanel类是继承于JFrame类、实现ActionListener类的界面类，包含actionPerformed方法和main方法。
 
-
+Employee类及其子类：
 ![Employee类及其子类](https://yanxuan.nosdn.127.net/500f1bbd579ed648bead267d4b0b62e0.png)
 
+系统功能模块图：
 ![系统功能模块图](https://yanxuan.nosdn.127.net/c22799398e407bc7d19232aec4977040.png)
 
 ### 三、详细设计：
@@ -60,6 +68,7 @@ String类型的变量name存放员工姓名，long类型的变量id存放员工�
 
 该类继承JFrame类，实现ActionListener接口。其中包含JLabel、JtextField、JButton、JeditorPane等Swing控件。在其构造方法中，使用采用了GridBagLayout布局的主面板，采用BoxLayout布局的子面板来放置各个功能模块的控件，并对每个按钮控件添加监听器。重写方法actionPerformed()，使其响应各个按钮对应的方法。在方法main()中初始化界面。
 
+布局原型图：
 ![布局原型图](https://yanxuan.nosdn.127.net/b3792dbdbf1254f79443f40b9c257234.png)
 
 ## 四、主要源程序代码：
@@ -88,4 +97,4 @@ String类型的变量name存放员工姓名，long类型的变量id存放员工�
 ![](https://yanxuan.nosdn.127.net/7d4b0b6146739dd9f894a8f8c1437e61.png)
 
 ## 六、源程序
-[https://github.com/sakiila/CompanyManagement](https://github.com/sakiila/CompanyManagement)
+[CompanyManagement](https://github.com/sakiila/CompanyManagement)
