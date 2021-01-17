@@ -74,7 +74,7 @@ String类型的变量name存放员工姓名，long类型的变量id存放员工�
 
 3. Saler类：
 
-![Saler](https://ae06.alicdn.com/kf/Hc283ba64f634464aaa389f489d9a0b5cJ.png)
+![Saler](https://ae02.alicdn.com/kf/H79d5d6a5c17d4621bbaddb024835a39a6.png)
 
 4. Technician类：
 
