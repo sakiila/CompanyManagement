@@ -23,10 +23,10 @@
 实现整个系统需要五个类文件。Employee类是所有人员的父类，Manager类、Saler类和Technician类继承于这个父类，并有自己的构造方法和其他方法，如图1所示。CompanyList类实现一个ArrayList集合，用来存放公司人员信息。其有增删改查等相关的方法，如图2所示。OperationPanel类是继承于JFrame类、实现ActionListener类的界面类，包含actionPerformed方法和main方法。
 
 Employee类及其子类：
-![Employee类及其子类](https://yanxuan.nosdn.127.net/500f1bbd579ed648bead267d4b0b62e0.png)
+![Employee类及其子类](https://ae06.alicdn.com/kf/Hc07632f0d818443eb42a55f0857ad2c3A.png)
 
 系统功能模块图：
-![系统功能模块图](https://yanxuan.nosdn.127.net/c22799398e407bc7d19232aec4977040.png)
+![系统功能模块图](https://ae03.alicdn.com/kf/H804a92521c0148f0a0f06038550a59fd7.png)
 
 ### 三、详细设计：
 
@@ -57,32 +57,32 @@ String类型的变量name存放员工姓名，long类型的变量id存放员工�
 该类继承JFrame类，实现ActionListener接口。其中包含JLabel、JtextField、JButton、JeditorPane等Swing控件。在其构造方法中，使用采用了GridBagLayout布局的主面板，采用BoxLayout布局的子面板来放置各个功能模块的控件，并对每个按钮控件添加监听器。重写方法actionPerformed()，使其响应各个按钮对应的方法。在方法main()中初始化界面。
 
 布局原型图：
-![布局原型图](https://yanxuan.nosdn.127.net/b3792dbdbf1254f79443f40b9c257234.png)
+![布局原型图]((https://ae05.alicdn.com/kf/Haeaa7a7d0329421f95de1f183be7cbfej.png)
 
 ## 四、主要源程序代码：
 
 1. Employee类：
-![Employee](https://yanxuan.nosdn.127.net/8163676e11c3df58fec4d453776ed065.png)
+![Employee](https://ae04.alicdn.com/kf/Hde6e7b7a368440299369cd75e751b9d8G.png)
 
 2. Manager类：
-![Manager](https://yanxuan.nosdn.127.net/207ba8ca8810b4a61165c5a5e0fb892b.png)
+![Manager](https://ae03.alicdn.com/kf/H13d497cd454f4fa78f04df82e4588dc6n.png)
 
 3. Saler类：
-![Saler](https://yanxuan.nosdn.127.net/42d297003ce46903c2a90345feb6ea75.png)
+![Saler](https://ae06.alicdn.com/kf/Hc283ba64f634464aaa389f489d9a0b5cJ.png)
 
 4. Technician类：
-![Technician](https://yanxuan.nosdn.127.net/71bb84788d2b3c99060bf3216f213e7e.png)
+![Technician](https://ae03.alicdn.com/kf/Hf55c5930cfee4b58a7704aeb48b302edt.png)
 
 5. CompanyList类：（部分程序）
-![CompanyLis](https://yanxuan.nosdn.127.net/1efe8618d6c0a419642c945539353dc5.png)
+![CompanyLis](https://ae05.alicdn.com/kf/H8992c69459e3491095b383f044767313v.png)
 
 6. OperationPanel类：（部分程序）
-![OperationPanel](https://yanxuan.nosdn.127.net/7d186b05dedb6c0c7523af1431ece996.png)
+![OperationPanel](https://ae03.alicdn.com/kf/H8b5bdb614cfb41d788985903d6e48d497.png)
 
 
 ## 五、程序运行结果
 
-![](https://yanxuan.nosdn.127.net/7d4b0b6146739dd9f894a8f8c1437e61.png)
+![程序运行结果](https://ae04.alicdn.com/kf/H710dc531a6ed41558b52d7cc50c6a8c64.png)
 
 ## 六、源程序
 [CompanyManagement](https://github.com/sakiila/CompanyManagement)
