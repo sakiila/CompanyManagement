@@ -81,7 +81,6 @@ String类型的变量name存放员工姓名，long类型的变量id存放员工�
 
 
 ## 五、程序运行结果
-
 ![程序运行结果](https://ae04.alicdn.com/kf/H710dc531a6ed41558b52d7cc50c6a8c64.png)
 
 ## 六、源程序
