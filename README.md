@@ -24,7 +24,7 @@
 
 Employee类及其子类：
 
-![Employee类及其子类](https://ae06.alicdn.com/kf/Hc07632f0d818443eb42a55f0857ad2c3A.png)
+![Employee类及其子类](https://pic7.58cdn.com.cn/nowater/webim/big/n_v26aeae75c8b5448da9b820001b8592991.png)
 
 系统功能模块图：
 
