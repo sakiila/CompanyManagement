@@ -1,7 +1,7 @@
 package me.baobo.cm;
 
 public class Manager extends Employee {
-	private double salary = 8000; // ¾­ÀíµÄ¹Ì¶¨¹¤×Ê
+	private double salary = 8000; // ç»ç†çš„å›ºå®šå·¥èµ„
 
 	Manager(String name) {
 		super(name);

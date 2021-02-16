@@ -1,7 +1,7 @@
 package me.baobo.cm;
 
 public class Saler extends Employee {
-	private double salesNum; // 销售人员的销售额
+	private double salesNum; // 閿�鍞汉鍛樼殑閿�鍞
 
 	Saler(String name, long salesNum) {
 		super(name);
@@ -10,8 +10,8 @@ public class Saler extends Employee {
 	}
 
 	public double getPay() {
-		 return salesNum*0.04;
-//		return Math.round(salesNum * 0.04); // 调用Math.round()进行四舍五入
+		return salesNum * 0.04;
+//		return Math.round(salesNum * 0.04); // 璋冪敤Math.round()杩涜鍥涜垗浜斿叆
 	}
 
 	public String toString() {

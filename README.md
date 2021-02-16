@@ -1,3 +1,5 @@
+# 企业人员信息管理系统
+
 ## 一、需求分析：
 
 某小型公司，主要有三类人员：经理、兼职技术人员和兼职推销员。这三类人员共同拥有的相关属性：姓名、编号；相关方法：获取当月薪水的getPay()方法、显示个人信息的toString()方法。
@@ -7,15 +9,10 @@
 要求：采用面向对象的编程思想，结合题意自己确定需要定义的类及各类的属性、构造方法和其他方法，并编写程序实现功能：
 
 1. 查询职工个人信息，可通过姓名、编号查询；
-
 2. 查询部门所有职工的详细信息；
-
 3. 修改职工信息；
-
 4. 删除职工信息；
-
 5. 添加职工信息；
-
 6. 查询所有职工信息，并将其存储到外设职工信息文件EmployeeData.txt中或者SQLServer数据库中，数据库中的表根据系统需求自己定义。
 
 ## 二、概要设计：
@@ -24,11 +21,11 @@
 
 Employee类及其子类：
 
-![Employee类及其子类](https://pic7.58cdn.com.cn/nowater/webim/big/n_v26aeae75c8b5448da9b820001b8592991.png)
+![Employee类及其子类](pictures/Employee类及其子类.png)
 
 系统功能模块图：
 
-![系统功能模块图](https://ae03.alicdn.com/kf/H804a92521c0148f0a0f06038550a59fd7.png)
+![系统功能模块图](pictures/系统功能模块图.png)
 
 ### 三、详细设计：
 
@@ -60,39 +57,44 @@ String类型的变量name存放员工姓名，long类型的变量id存放员工�
 
 布局原型图：
 
-![布局原型图](https://ae05.alicdn.com/kf/Haeaa7a7d0329421f95de1f183be7cbfej.png)
+![布局原型图](pictures/布局原型图.png)
 
 ## 四、主要源程序代码：
 
 1. Employee类：
 
-![Employee](https://ae04.alicdn.com/kf/Hde6e7b7a368440299369cd75e751b9d8G.png)
+![Employee](pictures/Employee类.png)
 
 2. Manager类：
 
-![Manager](https://ae03.alicdn.com/kf/H13d497cd454f4fa78f04df82e4588dc6n.png)
+![Manager](pictures/Manager类.png)
 
 3. Saler类：
 
-![Saler](https://ae02.alicdn.com/kf/H79d5d6a5c17d4621bbaddb024835a39a6.png)
+![Saler](pictures/Saler类.png)
 
 4. Technician类：
 
-![Technician](https://ae03.alicdn.com/kf/Hf55c5930cfee4b58a7704aeb48b302edt.png)
+![Technician](pictures/Technician类.png)
 
 5. CompanyList类：（部分程序）
 
-![CompanyLis](https://ae05.alicdn.com/kf/H8992c69459e3491095b383f044767313v.png)
+![CompanyLis](pictures/CompanyList类.png)
 
 6. OperationPanel类：（部分程序）
 
-![OperationPanel](https://ae03.alicdn.com/kf/H8b5bdb614cfb41d788985903d6e48d497.png)
-
+![OperationPanel](pictures/OperationPanel类.png)
 
 ## 五、程序运行结果
 
-![程序运行结果](https://ae04.alicdn.com/kf/H710dc531a6ed41558b52d7cc50c6a8c64.png)
+![程序运行结果](pictures/程序运行结果.png)
 
 ## 六、源程序
 
-[CompanyManagement](https://github.com/sakiila/CompanyManagement)
+[CompanyManagement 项目](https://github.com/sakiila/CompanyManagement)
+
+## 七、运行
+
+方式一：在右侧 Releases 中下载最新的 CompanyManagement.jar 文件，在本地环境的控制台使用 `java -jar CompanyManagement.jar` 命令运行即可。
+
+方式二（推荐）：Fork 本项目代码，Clone 到本地环境，使用 Eclipse 或 IntelliJ 打开本项目工程，运行 OperationPanel 类的 main 方法即可。

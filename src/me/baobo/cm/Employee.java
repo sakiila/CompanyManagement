@@ -1,9 +1,9 @@
 package me.baobo.cm;
 
 public class Employee {
-	public String name; // Ô±¹¤ĞÕÃû
-	public long id; // Ô±¹¤±àºÅ
-	public static int ID = 1000; // Ô±¹¤±àºÅ»ùÊıÎª1000
+	public String name; // å‘˜å·¥å§“å
+	public long id; // å‘˜å·¥ç¼–å·
+	public static int ID = 1000; // å‘˜å·¥ç¼–å·åŸºæ•°ä¸º1000
 
 	Employee(String name) {
 		this.name = name;

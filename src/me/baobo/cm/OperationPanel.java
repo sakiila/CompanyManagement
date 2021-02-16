@@ -1,89 +1,78 @@
 package me.baobo.cm;
 
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JEditorPane;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-
 public class OperationPanel extends JFrame implements ActionListener {
 
-	private static final long serialVersionUID = 1L; // ×Ô¶¯Éú³ÉµÄĞòÁĞ»¯£¬ÎªÁË±£³Ö°æ±¾µÄ¼æÈİĞÔ£¬¿ÉÒÔ²»Ğ´£¬µ«»áÓĞ¾¯¸æ
+	private static final long serialVersionUID = 1L; // è‡ªåŠ¨ç”Ÿæˆçš„åºåˆ—åŒ–ï¼Œä¸ºäº†ä¿æŒç‰ˆæœ¬çš„å…¼å®¹æ€§ï¼Œå¯ä»¥ä¸å†™ï¼Œä½†ä¼šæœ‰è­¦å‘Š
 
-	JLabel addIt = new JLabel("<html><font color=red>Ìí¼ÓÈËÔ±</font></html>");
-	JLabel managerName = new JLabel("¾­ÀíĞÕÃû£º");
+	JLabel addIt = new JLabel("<html><font color=red>æ·»åŠ äººå‘˜</font></html>");
+	JLabel managerName = new JLabel("ç»ç†å§“åï¼š");
 	JTextField managerNameText = new JTextField(10);
-	JButton addManager = new JButton("Ìí¼Ó");
+	JButton addManager = new JButton("æ·»åŠ ");
 
-	JLabel salerName = new JLabel("ÏúÊÛĞÕÃû£º");
+	JLabel salerName = new JLabel("é”€å”®å§“åï¼š");
 	JTextField salerNameText = new JTextField(10);
-	JLabel salerSales = new JLabel("ÏúÊÛ¶î¶È£º");
+	JLabel salerSales = new JLabel("é”€å”®é¢åº¦ï¼š");
 	JTextField salerSalesText = new JTextField(10);
-	JButton addSaler = new JButton("Ìí¼Ó");
+	JButton addSaler = new JButton("æ·»åŠ ");
 
-	JLabel technicianName = new JLabel("¼¼ÊõĞÕÃû£º");
+	JLabel technicianName = new JLabel("æŠ€æœ¯å§“åï¼š");
 	JTextField technicianNameText = new JTextField(10);
-	JLabel technicianWork = new JLabel("¼¼ÊõÊ±³¤£º");
+	JLabel technicianWork = new JLabel("æŠ€æœ¯æ—¶é•¿ï¼š");
 	JTextField technicianWorkText = new JTextField(10);
-	JButton addTechnician = new JButton("Ìí¼Ó");
+	JButton addTechnician = new JButton("æ·»åŠ ");
 
-	JLabel removeIt = new JLabel("<html><font color=red>É¾³ıÈËÔ±</font></html>");
-	JLabel removeID = new JLabel("ÈËÔ±±àºÅ£¨Ê×Ñ¡£©£º");
+	JLabel removeIt = new JLabel("<html><font color=red>åˆ é™¤äººå‘˜</font></html>");
+	JLabel removeID = new JLabel("äººå‘˜ç¼–å·ï¼ˆé¦–é€‰ï¼‰ï¼š");
 	JTextField removeIDText = new JTextField(10);
-	JLabel removeName = new JLabel("ÈËÔ±ĞÕÃû£º");
+	JLabel removeName = new JLabel("äººå‘˜å§“åï¼š");
 	JTextField removeNameText = new JTextField(10);
-	JButton removeHim = new JButton("É¾³ı");
+	JButton removeHim = new JButton("åˆ é™¤");
 
-	JLabel modifyIt = new JLabel("<html><font color=red>ĞŞ¸ÄÈËÔ±</font></html>");
-	JLabel modifyID_Before = new JLabel("ÈËÔ±±àºÅ£º");
+	JLabel modifyIt = new JLabel("<html><font color=red>ä¿®æ”¹äººå‘˜</font></html>");
+	JLabel modifyID_Before = new JLabel("äººå‘˜ç¼–å·ï¼š");
 	JTextField modifyIDText_Before = new JTextField(10);
-	JLabel modifyID_After = new JLabel("ĞŞ¸Ä±àºÅÎª£º");
+	JLabel modifyID_After = new JLabel("ä¿®æ”¹ç¼–å·ä¸ºï¼š");
 	JTextField modifyIDText_After = new JTextField(10);
-	JLabel modifyName = new JLabel("ĞŞ¸ÄĞÕÃûÎª£º");
+	JLabel modifyName = new JLabel("ä¿®æ”¹å§“åä¸ºï¼š");
 	JTextField modifyNameText = new JTextField(10);
-	JButton modifyHim = new JButton("ĞŞ¸Ä");
+	JButton modifyHim = new JButton("ä¿®æ”¹");
 
-	JLabel queryIt = new JLabel("<html><font color=red>²éÑ¯ÈËÔ±</font></html>");
-	JLabel queryID = new JLabel("ÈËÔ±±àºÅ£¨Ê×Ñ¡£©£º");
+	JLabel queryIt = new JLabel("<html><font color=red>æŸ¥è¯¢äººå‘˜</font></html>");
+	JLabel queryID = new JLabel("äººå‘˜ç¼–å·ï¼ˆé¦–é€‰ï¼‰ï¼š");
 	JTextField queryIDText = new JTextField(10);
-	JLabel queryName = new JLabel("ÈËÔ±ĞÕÃû£º");
+	JLabel queryName = new JLabel("äººå‘˜å§“åï¼š");
 	JTextField queryNameText = new JTextField(10);
-	JButton queryHim = new JButton("²éÑ¯");
-	JButton queryThem = new JButton("²éÑ¯ËùÓĞ");
-	JButton queryAndSave = new JButton("²éÑ¯²¢±£´æ");
+	JButton queryHim = new JButton("æŸ¥è¯¢");
+	JButton queryThem = new JButton("æŸ¥è¯¢æ‰€æœ‰");
+	JButton queryAndSave = new JButton("æŸ¥è¯¢å¹¶ä¿å­˜");
 
-	JLabel showIt = new JLabel("<html><font color=blue>ÏÔÊ¾ÇøÓò</font></html>");
-	JEditorPane jep = new JEditorPane(); // ³õÊ¼»¯¡°ÏÔÊ¾ÇøÓò¡±
+	JLabel showIt = new JLabel("<html><font color=blue>æ˜¾ç¤ºåŒºåŸŸ</font></html>");
+	JEditorPane jep = new JEditorPane(); // åˆå§‹åŒ–â€œæ˜¾ç¤ºåŒºåŸŸâ€
 
-	CompanyList cl0 = new CompanyList(); // ³õÊ¼»¯CompanyListÀà
+	CompanyList cl0 = new CompanyList(); // åˆå§‹åŒ–CompanyListç±»
 
-	// ¹¹Ôì·½·¨
+	// æ„é€ æ–¹æ³•
 	public OperationPanel() {
 		// setTitle("CompanyManage");
 		// setResizable(false);
 		// setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JPanel panel01 = new JPanel(); // panel01ÊÇÒ»¸ö¸¸Ãæ°å
-		panel01.setLayout(new BoxLayout(panel01, BoxLayout.Y_AXIS)); // ¶¨Òåpanel01µÄ²¼¾ÖÎª
-																		// BoxLayout£¬BoxLayoutÎª´¹Ö±ÅÅÁĞ
-		panel01.add(Box.createVerticalStrut(10)); // ¼ÓÈëÒ»¸ö²»¿É¼ûµÄ Strut£¬´Ó¶ø¶Ô¶¥²¿Áô³öÒ»¶¨µÄ¿Õ¼ä
-		JPanel panel01_01 = new JPanel(); // panel01_01ÊÇÒ»¸ö×ÓÃæ°å£¬ÓÃÀ´·ÅÖÃ¹¦ÄÜÄ£¿éµÄ±êÌâ£¨±ÈÈç´Ë´¦addIt¶ÔÓ¦µÄ¡°Ìí¼ÓÈËÔ±¡±±êÇ©£©
+		JPanel panel01 = new JPanel(); // panel01æ˜¯ä¸€ä¸ªçˆ¶é¢æ¿
+		panel01.setLayout(new BoxLayout(panel01, BoxLayout.Y_AXIS)); // å®šä¹‰panel01çš„å¸ƒå±€ä¸º
+		// BoxLayoutï¼ŒBoxLayoutä¸ºå‚ç›´æ’åˆ—
+		panel01.add(Box.createVerticalStrut(10)); // åŠ å…¥ä¸€ä¸ªä¸å¯è§çš„ Strutï¼Œä»è€Œå¯¹é¡¶éƒ¨ç•™å‡ºä¸€å®šçš„ç©ºé—´
+		JPanel panel01_01 = new JPanel(); // panel01_01æ˜¯ä¸€ä¸ªå­é¢æ¿ï¼Œç”¨æ¥æ”¾ç½®åŠŸèƒ½æ¨¡å—çš„æ ‡é¢˜ï¼ˆæ¯”å¦‚æ­¤å¤„addItå¯¹åº”çš„â€œæ·»åŠ äººå‘˜â€æ ‡ç­¾ï¼‰
 		panel01_01.add(addIt);
-		JPanel panel01_02 = new JPanel(); // panel01_02Ò²ÊÇÒ»¸ö×ÓÃæ°å£¬ÓÃÀ´·ÅÖÃbox1
-		Box box1 = Box.createHorizontalBox(); // ´´½¨Ò»¸ö´Ó×óµ½ÓÒÏÔÊ¾Æä×é¼şµÄbox1£¬ÓÃÀ´Ë®Æ½·ÅÖÃÊäÈë¿òºÍ°´Å¥
-		panel01_02.setLayout(new BoxLayout(panel01_02, BoxLayout.X_AXIS)); //// ¶¨Òåpanel01_02µÄ²¼¾ÖÎª
-																			//// BoxLayout£¬BoxLayoutÎªË®Æ½ÅÅÁĞ
-		panel01_02.add(box1); // °Ñbox1·ÅÈëpanel01_02ÖĞ
+		JPanel panel01_02 = new JPanel(); // panel01_02ä¹Ÿæ˜¯ä¸€ä¸ªå­é¢æ¿ï¼Œç”¨æ¥æ”¾ç½®box1
+		Box box1 = Box.createHorizontalBox(); // åˆ›å»ºä¸€ä¸ªä»å·¦åˆ°å³æ˜¾ç¤ºå…¶ç»„ä»¶çš„box1ï¼Œç”¨æ¥æ°´å¹³æ”¾ç½®è¾“å…¥æ¡†å’ŒæŒ‰é’®
+		panel01_02.setLayout(new BoxLayout(panel01_02, BoxLayout.X_AXIS)); //// å®šä¹‰panel01_02çš„å¸ƒå±€ä¸º
+		//// BoxLayoutï¼ŒBoxLayoutä¸ºæ°´å¹³æ’åˆ—
+		panel01_02.add(box1); // æŠŠbox1æ”¾å…¥panel01_02ä¸­
 		// panel01_02.add(managerName);
 		// panel01_02.add(managerAddName);
 		// panel01_02.add(addManager);
@@ -97,7 +86,7 @@ public class OperationPanel extends JFrame implements ActionListener {
 		// panel01_02.add(technicianWork);
 		// panel01_02.add(technicianAddWork);
 		// panel01_02.add(addTechnician);
-		box1.add(managerName); // °ÑÊäÈë¿òºÍ°´Å¥µÈ¿Ø¼ş·ÅÈëbox1ÖĞ
+		box1.add(managerName); // æŠŠè¾“å…¥æ¡†å’ŒæŒ‰é’®ç­‰æ§ä»¶æ”¾å…¥box1ä¸­
 		box1.add(managerNameText);
 		box1.add(addManager);
 		box1.add(salerName);
@@ -110,9 +99,9 @@ public class OperationPanel extends JFrame implements ActionListener {
 		box1.add(technicianWork);
 		box1.add(technicianWorkText);
 		box1.add(addTechnician);
-		panel01.add(panel01_01); // °Ñpanel01_01·ÅÈëpanel01ÖĞ
-		panel01.add(panel01_02); // °Ñpanel01_02·ÅÈëpanel01ÖĞ
-		panel01.add(Box.createVerticalStrut(10)); // ¼ÓÈëÒ»¸ö²»¿É¼ûµÄ Strut£¬´Ó¶ø¶Ôµ×²¿Áô³öÒ»¶¨µÄ¿Õ¼ä
+		panel01.add(panel01_01); // æŠŠpanel01_01æ”¾å…¥panel01ä¸­
+		panel01.add(panel01_02); // æŠŠpanel01_02æ”¾å…¥panel01ä¸­
+		panel01.add(Box.createVerticalStrut(10)); // åŠ å…¥ä¸€ä¸ªä¸å¯è§çš„ Strutï¼Œä»è€Œå¯¹åº•éƒ¨ç•™å‡ºä¸€å®šçš„ç©ºé—´
 
 		JPanel panel02 = new JPanel();
 		panel02.setLayout(new BoxLayout(panel02, BoxLayout.Y_AXIS));
@@ -187,17 +176,17 @@ public class OperationPanel extends JFrame implements ActionListener {
 		// jta.setTabSize(10);
 		// JEditorPane jep = new JEditorPane();
 		jep.setPreferredSize(new Dimension(100, 100));
-		JScrollPane jsp = new JScrollPane(jep); // ³õÊ¼»¯Ò»¸öJScrollPane£¬ÓÃÀ´·ÅÖÃ¡°ÏÔÊ¾ÇøÓò¡±
+		JScrollPane jsp = new JScrollPane(jep); // åˆå§‹åŒ–ä¸€ä¸ªJScrollPaneï¼Œç”¨æ¥æ”¾ç½®â€œæ˜¾ç¤ºåŒºåŸŸâ€
 		box5.add(jsp);
 		panel05_02.add(box5);
 		panel05.add(panel05_01);
 		panel05.add(panel05_02);
 		panel05.add(Box.createVerticalStrut(10));
 
-		// ´´½¨ panelContainer
+		// åˆ›å»º panelContainer
 		JPanel panelContainer = new JPanel();
-		// panelContainer µÄ²¼¾ÖÎª GridBagLayout
-		panelContainer.setLayout(new GridBagLayout()); // panelContainer²ÉÓÃGridBagLayout½øĞĞ²¼¾Ö
+		// panelContainer çš„å¸ƒå±€ä¸º GridBagLayout
+		panelContainer.setLayout(new GridBagLayout()); // panelContaineré‡‡ç”¨GridBagLayoutè¿›è¡Œå¸ƒå±€
 
 		GridBagConstraints c1 = new GridBagConstraints();
 		c1.gridx = 0;
@@ -239,16 +228,16 @@ public class OperationPanel extends JFrame implements ActionListener {
 		c5.fill = GridBagConstraints.HORIZONTAL;
 		panelContainer.add(panel05, c5);
 
-		JFrame frame = new JFrame("ÆóÒµÈËÔ±ĞÅÏ¢¹ÜÀíÏµÍ³");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // ÉèÖÃÓÃ»§ÔÚ´Ë´°ÌåÉÏ·¢Æğ"close"
-																// Ê±Ä¬ÈÏÖ´ĞĞ¹Ø±Õ²Ù×÷
-		panelContainer.setOpaque(true); // ÉèÖÃ¿Ø¼şÊÇ·ñÍ¸Ã÷µÄ£¬true±íÊ¾²»Í¸Ã÷
-		frame.setSize(new Dimension(1000, 400)); // ÉèÖÃ´°Ìå´óĞ¡£¬¿í1000£¬¸ß400
-		frame.setContentPane(panelContainer); // ÉèÖÃpanelContainerÎªÄÚÈİÃæ°å
-		frame.setVisible(true); // ÉèÖÃ´°Ìå¿É¼ûĞÔ£¬trueÎª¿É¼û
-		frame.setResizable(false); // ÉèÖÃ´°ÌåÀ­Éì£¬falseÎª²»ÔÊĞí
+		JFrame frame = new JFrame("ä¼ä¸šäººå‘˜ä¿¡æ¯ç®¡ç†ç³»ç»Ÿ");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // è®¾ç½®ç”¨æˆ·åœ¨æ­¤çª—ä½“ä¸Šå‘èµ·"close"
+		// æ—¶é»˜è®¤æ‰§è¡Œå…³é—­æ“ä½œ
+		panelContainer.setOpaque(true); // è®¾ç½®æ§ä»¶æ˜¯å¦é€æ˜çš„ï¼Œtrueè¡¨ç¤ºä¸é€æ˜
+		frame.setSize(new Dimension(1000, 400)); // è®¾ç½®çª—ä½“å¤§å°ï¼Œå®½1000ï¼Œé«˜400
+		frame.setContentPane(panelContainer); // è®¾ç½®panelContainerä¸ºå†…å®¹é¢æ¿
+		frame.setVisible(true); // è®¾ç½®çª—ä½“å¯è§æ€§ï¼Œtrueä¸ºå¯è§
+		frame.setResizable(false); // è®¾ç½®çª—ä½“æ‹‰ä¼¸ï¼Œfalseä¸ºä¸å…è®¸
 
-		// ¶ÔÃ¿¸ö°´Å¥Ìí¼Ó¼àÌıÆ÷
+		// å¯¹æ¯ä¸ªæŒ‰é’®æ·»åŠ ç›‘å¬å™¨
 		addManager.addActionListener(this);
 		addSaler.addActionListener(this);
 		addTechnician.addActionListener(this);
@@ -260,27 +249,27 @@ public class OperationPanel extends JFrame implements ActionListener {
 
 	}
 
-	// main·½·¨
+	// mainæ–¹æ³•
 	public static void main(String[] args) {
 
-		new OperationPanel(); // ³õÊ¼»¯½çÃæ
+		new OperationPanel(); // åˆå§‹åŒ–ç•Œé¢
 		// op.pack();
 		// op.setVisible(true);
 
-		// Employee m = new Manager("Íõ¾­Àí");
+		// Employee m = new Manager("ç‹ç»ç†");
 		// System.out.println(m.toString());
 		//
-		// Employee s = new Saler("³ÂÏúÊÛ",5000);
+		// Employee s = new Saler("é™ˆé”€å”®",5000);
 		// System.out.println(s.toString());
 		//
-		// Employee t = new Technician("Àî¼¼¹¤",200);
+		// Employee t = new Technician("ææŠ€å·¥",200);
 		// System.out.println(t.toString());
 
 		// CompanyList cl0 = new CompanyList();
 		// cl0.add(m);
 		// cl0.add(s);
 		// cl0.add(t);
-		// cl0.remove("³ÂÏúÊÛ");
+		// cl0.remove("é™ˆé”€å”®");
 		// cl0.remove(1003);
 		// cl0.queryAll();
 		// cl0.query("T");
@@ -293,58 +282,58 @@ public class OperationPanel extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// CompanyList cl0 = new CompanyList();
-		// Ìí¼Ó¾­Àí
+		// æ·»åŠ ç»ç†
 		if (e.getSource() == addManager) {
-			String tmp = managerNameText.getText().toString(); // »ñÈ¡ÊäÈë¿òÖĞµÄÄÚÈİ
+			String tmp = managerNameText.getText().toString(); // è·å–è¾“å…¥æ¡†ä¸­çš„å†…å®¹
 			if (tmp.isEmpty()) {
-				jep.setText("Warning! You must fill the blank!"); // ÊäÈë¿òÎª¿ÕÔòÊä³ö¾¯¸æ
+				jep.setText("Warning! You must fill the blank!"); // è¾“å…¥æ¡†ä¸ºç©ºåˆ™è¾“å‡ºè­¦å‘Š
 			} else {
 				Employee m = new Manager(tmp);
 				cl0.add(m);
 			}
 		}
-		// Ìí¼ÓÏúÊÛ
+		// æ·»åŠ é”€å”®
 		if (e.getSource() == addSaler) {
 			String tmp = salerNameText.getText().toString();
 			String work_s = salerSalesText.getText().toString();
-			if (tmp.isEmpty() || work_s.isEmpty()) { // ÅĞ¶ÏÊäÈë¿òÊÇ·ñ¿Õ°×
-				jep.setText("Warning! You must fill the blank!"); // ÊäÈë¿òÎª¿ÕÔòÊä³ö¾¯¸æ
+			if (tmp.isEmpty() || work_s.isEmpty()) { // åˆ¤æ–­è¾“å…¥æ¡†æ˜¯å¦ç©ºç™½
+				jep.setText("Warning! You must fill the blank!"); // è¾“å…¥æ¡†ä¸ºç©ºåˆ™è¾“å‡ºè­¦å‘Š
 			} else {
-				long work_l = Long.parseLong(work_s); // ½«StringÀàĞÍµÄÊı×Ö×ª»¯ÎªlongÀàĞÍ
+				long work_l = Long.parseLong(work_s); // å°†Stringç±»å‹çš„æ•°å­—è½¬åŒ–ä¸ºlongç±»å‹
 				Employee s = new Saler(tmp, work_l);
 				cl0.add(s);
 			}
 		}
-		// Ìí¼Ó¼¼¹¤
+		// æ·»åŠ æŠ€å·¥
 		if (e.getSource() == addTechnician) {
 			String tmp = technicianNameText.getText().toString();
 			String work_s = technicianWorkText.getText().toString();
-			if (tmp.isEmpty() || work_s.isEmpty()) { // ÅĞ¶ÏÊäÈë¿òÊÇ·ñ¿Õ°×
-				jep.setText("Warning! You must fill the blank!"); // ÊäÈë¿òÎª¿ÕÔòÊä³ö¾¯¸æ
+			if (tmp.isEmpty() || work_s.isEmpty()) { // åˆ¤æ–­è¾“å…¥æ¡†æ˜¯å¦ç©ºç™½
+				jep.setText("Warning! You must fill the blank!"); // è¾“å…¥æ¡†ä¸ºç©ºåˆ™è¾“å‡ºè­¦å‘Š
 			} else {
 				long work_l = Long.parseLong(work_s);
 				Employee t = new Technician(tmp, work_l);
 				cl0.add(t);
 			}
 		}
-		// É¾³ıÈËÔ±
+		// åˆ é™¤äººå‘˜
 		if (e.getSource() == removeHim) {
 			String tmpID_s = removeIDText.getText().toString();
 			// long tmpID_l = Long.parseLong(tmpID_s);
 			String tmpName = removeNameText.getText().toString();
-			if (!tmpID_s.isEmpty()) { // Èç¹û±àºÅÊäÈë¿òÓĞÄÚÈİ
+			if (!tmpID_s.isEmpty()) { // å¦‚æœç¼–å·è¾“å…¥æ¡†æœ‰å†…å®¹
 				// System.out.println("Step 1");
 				long tmpID_l = Long.parseLong(tmpID_s);
 				// System.out.println("Step 2");
 				cl0.remove(tmpID_l);
 				// System.out.println("Step 3");
-			} else if (!tmpName.isEmpty()) { // Èç¹û±àºÅÊäÈë¿òÃ»ÓĞÄÚÈİ£¬ĞÕÃûÊäÈë¿òÓĞÄÚÈİ
+			} else if (!tmpName.isEmpty()) { // å¦‚æœç¼–å·è¾“å…¥æ¡†æ²¡æœ‰å†…å®¹ï¼Œå§“åè¾“å…¥æ¡†æœ‰å†…å®¹
 				// System.out.println("Step 4");
 				cl0.remove(tmpName);
 				// System.out.println("Step 8");
 			}
 		}
-		// ĞŞ¸ÄÈËÔ±
+		// ä¿®æ”¹äººå‘˜
 		if (e.getSource() == modifyHim) {
 			String tmpID01_s = modifyIDText_Before.getText().toString();
 			long tmpID01_l = Long.parseLong(tmpID01_s);
@@ -353,26 +342,26 @@ public class OperationPanel extends JFrame implements ActionListener {
 			String tmpName = modifyNameText.getText().toString();
 			cl0.modify(tmpID01_l, tmpName, tmpID02_l);
 		}
-		// ²éÑ¯µ¥¸öÈËÔ±
+		// æŸ¥è¯¢å•ä¸ªäººå‘˜
 		if (e.getSource() == queryHim) {
 			String tmpID_s = queryIDText.getText().toString();
 			// long tmpID_l = Long.parseLong(tmpID_s);
 			String tmpName = queryNameText.getText().toString();
-			if (!tmpID_s.isEmpty()) { // Èç¹û±àºÅÊäÈë¿òÓĞÄÚÈİ
+			if (!tmpID_s.isEmpty()) { // å¦‚æœç¼–å·è¾“å…¥æ¡†æœ‰å†…å®¹
 				// cl0.query(tmp);
 				long tmpID_l = Long.parseLong(tmpID_s);
 				jep.setText(cl0.query(tmpID_l));
-			} else if (!tmpName.isEmpty()) { // Èç¹û±àºÅÊäÈë¿òÃ»ÓĞÄÚÈİ£¬ĞÕÃûÊäÈë¿òÓĞÄÚÈİ
+			} else if (!tmpName.isEmpty()) { // å¦‚æœç¼–å·è¾“å…¥æ¡†æ²¡æœ‰å†…å®¹ï¼Œå§“åè¾“å…¥æ¡†æœ‰å†…å®¹
 				// cl0.query(tmpID_l);
 				jep.setText(cl0.query(tmpName));
 			}
 		}
-		// ²éÑ¯ËùÓĞÈËÔ±
+		// æŸ¥è¯¢æ‰€æœ‰äººå‘˜
 		if (e.getSource() == queryThem) {
 			// String tmp = cl0.queryAll();
 			jep.setText(cl0.queryAll());
 		}
-		// ²éÑ¯²¢ÇÒ±£´æ
+		// æŸ¥è¯¢å¹¶ä¸”ä¿å­˜
 		if (e.getSource() == queryAndSave) {
 			jep.setText(cl0.save());
 		}

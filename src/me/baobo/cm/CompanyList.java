@@ -9,18 +9,18 @@ import java.util.List;
 
 public class CompanyList {
 
-	List<Employee> cl = new ArrayList<>(); // ³õÊ¼»¯Ò»¸öArrayList¼¯ºÏ£¬ÓÃÀ´´æ·ÅÈËÔ±ĞÅÏ¢
+	List<Employee> cl = new ArrayList<>(); // åˆå§‹åŒ–ä¸€ä¸ªArrayListé›†åˆï¼Œç”¨æ¥å­˜æ”¾äººå‘˜ä¿¡æ¯
 
-	// Ìí¼ÓÈËÔ±
+	// æ·»åŠ äººå‘˜
 	public void add(Employee e) {
 		cl.add(e);
 	}
 
-	// É¾³ıÈËÔ±
-	public void remove(String name) { // Í¨¹ıĞÕÃûÉ¾³ıÈËÔ±
+	// åˆ é™¤äººå‘˜
+	public void remove(String name) { // é€šè¿‡å§“ååˆ é™¤äººå‘˜
 		// System.out.println("Step 5");
 		for (int i = 0; i < cl.size(); i++) {
-			if (cl.get(i).name.matches(name)) { // ÕâÀï²»ÄÜĞ´³Écl.get(i).name==name£¬·ñÔòÎŞ·¨Æ¥Åä³É¹¦
+			if (cl.get(i).name.matches(name)) { // è¿™é‡Œä¸èƒ½å†™æˆcl.get(i).name==nameï¼Œå¦åˆ™æ— æ³•åŒ¹é…æˆåŠŸ
 				// System.out.println("Step 6");
 				cl.remove(cl.get(i));
 				// System.out.println("Step 7");
@@ -29,7 +29,7 @@ public class CompanyList {
 		}
 	}
 
-	public void remove(long id) { // Í¨¹ı±àºÅÉ¾³ıÈËÔ±
+	public void remove(long id) { // é€šè¿‡ç¼–å·åˆ é™¤äººå‘˜
 		for (int i = 0; i < cl.size(); i++) {
 			if (cl.get(i).id == id) {
 				cl.remove(cl.get(i));
@@ -38,23 +38,23 @@ public class CompanyList {
 		}
 	}
 
-	// ĞŞ¸ÄÔ±¹¤µÄĞÕÃûºÍ±àºÅ
+	// ä¿®æ”¹å‘˜å·¥çš„å§“åå’Œç¼–å·
 	public void modify(long id1, String name, long id2) {
-		boolean okToMod = true; // ÅĞ¶Ï±êÊ¶£¬ÓÃÀ´È·¶¨ÊÇ·ñÄÜ¹»ĞŞ¸ÄÔ±¹¤ĞÅÏ¢
+		boolean okToMod = true; // åˆ¤æ–­æ ‡è¯†ï¼Œç”¨æ¥ç¡®å®šæ˜¯å¦èƒ½å¤Ÿä¿®æ”¹å‘˜å·¥ä¿¡æ¯
 		for (int j = 0; j < cl.size(); j++) {
-			if (id1 == id2 || cl.get(j).name.matches(name) || cl.get(j).id == id2) { // ĞŞ¸ÄºóµÄÔ±¹¤ĞÕÃûname»òÕß±àºÅidÈç¹ûÓëÆäËûÈËÏàÍ¬£¬Ôò²»ĞŞ¸Ä
-				okToMod = false; // false±íÊ¾²»ĞŞ¸Ä
+			if (id1 == id2 || cl.get(j).name.matches(name) || cl.get(j).id == id2) { // ä¿®æ”¹åçš„å‘˜å·¥å§“ånameæˆ–è€…ç¼–å·idå¦‚æœä¸å…¶ä»–äººç›¸åŒï¼Œåˆ™ä¸ä¿®æ”¹
+				okToMod = false; // falseè¡¨ç¤ºä¸ä¿®æ”¹
 				break;
 			}
 		}
 		if (okToMod) {
 			for (int i = 0; i < cl.size(); i++) {
-				if (cl.get(i).id == id1) { // ²éÕÒ±àºÅÎªid1µÄÔ±¹¤
-					if (name != null) { // ĞŞ¸Äºóname²»Îª¿ÕÖµÔòĞŞ¸Ä£¬Îª¿ÕÖµÔò²»±ä»¯
+				if (cl.get(i).id == id1) { // æŸ¥æ‰¾ç¼–å·ä¸ºid1çš„å‘˜å·¥
+					if (name != null) { // ä¿®æ”¹ånameä¸ä¸ºç©ºå€¼åˆ™ä¿®æ”¹ï¼Œä¸ºç©ºå€¼åˆ™ä¸å˜åŒ–
 						cl.get(i).name = name;
 					}
-					// for(int j=0;j<cl.size();j++){ //±éÀú¼¯ºÏ
-					// if(cl.get(j).id==id2){ //ĞŞ¸ÄºóµÄid²»ÄÜÓëÆäËûÈËÏàÍ¬
+					// for(int j=0;j<cl.size();j++){ //éå†é›†åˆ
+					// if(cl.get(j).id==id2){ //ä¿®æ”¹åçš„idä¸èƒ½ä¸å…¶ä»–äººç›¸åŒ
 					// break;
 					// }else{
 					cl.get(i).id = id2;
@@ -70,7 +70,7 @@ public class CompanyList {
 		}
 	}
 
-	// ²éÑ¯ËùÓĞÈËÔ±
+	// æŸ¥è¯¢æ‰€æœ‰äººå‘˜
 	public String queryAll() {
 		String tmp = "";
 		for (Employee e : cl) {
@@ -80,11 +80,11 @@ public class CompanyList {
 		return tmp;
 	}
 
-	// ²éÑ¯Ô±¹¤¸öÈËĞÅÏ¢£¬¿ÉÒÔÍ¨¹ıĞÕÃû¡¢±àºÅ²éÑ¯
-	public String query(String name) { // Í¨¹ıĞÕÃû²éÑ¯
+	// æŸ¥è¯¢å‘˜å·¥ä¸ªäººä¿¡æ¯ï¼Œå¯ä»¥é€šè¿‡å§“åã€ç¼–å·æŸ¥è¯¢
+	public String query(String name) { // é€šè¿‡å§“åæŸ¥è¯¢
 		String tmp = "";
 		for (int i = 0; i < cl.size(); i++) {
-			if (cl.get(i).name.matches(name)) { // ÕâÀï²»ÄÜĞ´³Écl.get(i).name==name£¬·ñÔòÎŞ·¨Æ¥Åä³É¹¦
+			if (cl.get(i).name.matches(name)) { // è¿™é‡Œä¸èƒ½å†™æˆcl.get(i).name==nameï¼Œå¦åˆ™æ— æ³•åŒ¹é…æˆåŠŸ
 				// System.out.println(cl.get(i));
 				tmp = cl.get(i).toString();
 			}
@@ -92,7 +92,7 @@ public class CompanyList {
 		return tmp;
 	}
 
-	public String query(long id) { // Í¨¹ı±àºÅ²éÑ¯
+	public String query(long id) { // é€šè¿‡ç¼–å·æŸ¥è¯¢
 		String tmp = "";
 		for (int i = 0; i < cl.size(); i++) {
 			if (cl.get(i).id == id) {
@@ -103,21 +103,21 @@ public class CompanyList {
 		return tmp;
 	}
 
-	// ²éÑ¯ËùÓĞÔ±¹¤ĞÅÏ¢£¬²¢´æ´¢µ½EmployeeData.txtÎÄ¼ş
+	// æŸ¥è¯¢æ‰€æœ‰å‘˜å·¥ä¿¡æ¯ï¼Œå¹¶å­˜å‚¨åˆ°EmployeeData.txtæ–‡ä»¶
 	public String save() {
-		String tmp = "Failed to save!"; // Ä¬ÈÏ·µ»ØÊ§°ÜÓï¾ä
+		String tmp = "Failed to save!"; // é»˜è®¤è¿”å›å¤±è´¥è¯­å¥
 		try {
-			FileWriter fw = new FileWriter("EmployeeData.txt"); // ÎÄ¼şÊä³ö×Ö·ûÁ÷
-			BufferedWriter bw = new BufferedWriter(fw); // »º³åÊä³ö´¦ÀíÁ÷
+			FileWriter fw = new FileWriter("EmployeeData.txt"); // æ–‡ä»¶è¾“å‡ºå­—ç¬¦æµ
+			BufferedWriter bw = new BufferedWriter(fw); // ç¼“å†²è¾“å‡ºå¤„ç†æµ
 			for (Employee e : cl) {
-				bw.write(e.toString()); // ÏòÎÄ¼şÖĞĞ´ÈëÊı¾İ
-				bw.newLine(); // »»ĞĞ
+				bw.write(e.toString()); // å‘æ–‡ä»¶ä¸­å†™å…¥æ•°æ®
+				bw.newLine(); // æ¢è¡Œ
 			}
-			bw.flush(); // Ç¿ÖÆ½«»º³åÇøÖĞµÄÊı¾İ·¢ËÍ³öÈ¥,²»±ØµÈµ½»º³åÇøÂú
+			bw.flush(); // å¼ºåˆ¶å°†ç¼“å†²åŒºä¸­çš„æ•°æ®å‘é€å‡ºå»,ä¸å¿…ç­‰åˆ°ç¼“å†²åŒºæ»¡
 			bw.close();
 			fw.close();
 			// System.out.println("Saved Successfully!");
-			tmp = "Saved Successfully!"; // Ö´ĞĞ³É¹¦·µ»Ø³É¹¦Óï¾ä
+			tmp = "Saved Successfully!"; // æ‰§è¡ŒæˆåŠŸè¿”å›æˆåŠŸè¯­å¥
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

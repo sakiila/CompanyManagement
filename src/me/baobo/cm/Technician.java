@@ -1,7 +1,7 @@
 package me.baobo.cm;
 
 public class Technician extends Employee {
-	private double workHours; // ¼¼ÊõÈËÔ±µÄ¹¤×÷Ğ¡Ê±Êı
+	private double workHours; // æŠ€æœ¯äººå‘˜çš„å·¥ä½œå°æ—¶æ•°
 
 	Technician(String name, long workHours) {
 		super(name);
