@@ -1,5 +1,9 @@
 # 企业人员信息管理系统
 
+Swing-based visual interface enterprise personnel information management system.
+
+基于 Swing 的可视化界面企业人员信息管理系统。
+
 ## 一、需求分析：
 
 某小型公司，主要有三类人员：经理、兼职技术人员和兼职推销员。这三类人员共同拥有的相关属性：姓名、编号；相关方法：获取当月薪水的getPay()方法、显示个人信息的toString()方法。
