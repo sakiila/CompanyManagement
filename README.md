@@ -35,9 +35,7 @@ Employee类及其子类：
 
 1. Employee类：
 
-String类型的变量name存放员工姓名，long类型的变量id存放员工编号，int类型的静态变量ID具有1000的初值，表示员工的编号基数。构造方法中将
-
-形参name放入域变量name，并让ID自增一次。
+String类型的变量name存放员工姓名，long类型的变量id存放员工编号，int类型的静态变量ID具有1000的初值，表示员工的编号基数。构造方法中将形参name放入域变量name，并让ID自增一次。
 
 2. Manager类：
 
